@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+        <color name="instablue">#274877</color>
+        <color name="instadarkblue">#162d4e</color>
+        <color name="white">#fff</color>
+
+
 </resources>
