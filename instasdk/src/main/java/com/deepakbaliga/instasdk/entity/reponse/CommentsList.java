@@ -1,7 +1,6 @@
-package com.deepakbaliga.instasdk.entity.model;
+package com.deepakbaliga.instasdk.entity.reponse;
 
-import android.support.annotation.Nullable;
-
+import com.deepakbaliga.instasdk.entity.model.Comment;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -9,29 +8,28 @@ import java.util.List;
 /**
  * Created by deezdroid on 24/10/15.
  */
-public class UserEntity {
+public class CommentsList {
 
 
     private MetaEntity meta;
 
-    @Nullable
     @SerializedName("data")
-    private List<User> users;
+    private List<Comment> comments;
 
     public void setMeta(MetaEntity meta) {
         this.meta = meta;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public MetaEntity getMeta() {
         return meta;
     }
 
-    public List<User> getUsers() {
-        return users;
+    public List<Comment> getComments() {
+        return comments;
     }
 
     public static class MetaEntity {
