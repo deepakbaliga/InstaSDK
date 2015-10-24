@@ -6,4 +6,5 @@ package com.deepakbaliga.instasdk.util;
 public class InstaConstants {
     public static final String ACCESSTOKEN = "accesstoken";
     public static final String NO_INTERNET_CONNECTION = "Not connected to internet";
+    public static final String INSTA_BASE_URL = "https://api.instagram.com/v1/";
 }
