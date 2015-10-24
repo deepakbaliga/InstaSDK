@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -71,6 +72,7 @@ public class InstaAuthentication extends Dialog {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
 
+
                 if(!NetworkUtility.isNetworkConnected(getContext())){
                     authentication.failure(InstaConstants.NO_INTERNET_CONNECTION);
                 }
@@ -119,6 +121,7 @@ public class InstaAuthentication extends Dialog {
         this.show();
         this.setTitle(dialogTitle);
     }
+
 
     private void initializeViews(){
 

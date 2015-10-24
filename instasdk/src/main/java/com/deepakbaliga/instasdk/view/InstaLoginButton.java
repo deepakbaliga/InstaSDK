@@ -39,7 +39,7 @@ public class InstaLoginButton extends Button {
         setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.mipmap.insta_logo), null, null, null);
         setBackgroundResource(R.drawable.instagram_button);
         setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
-        setPadding(8, 8, 8, 8);
+        setPadding(8, 8, 14, 8);
         setTextColor(getResources().getColor(R.color.white));
     }
 
