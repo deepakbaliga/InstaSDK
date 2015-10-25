@@ -27,6 +27,8 @@ public class InstaConstants {
 
     public static final String TAG_NAME = "tag-name";
 
+    public static final String LOCATION_ID = "location-id";
+
 
     public static class Endpoint {
 
@@ -57,6 +59,10 @@ public class InstaConstants {
         public static final String GET_TAG_DETAILS = "tags/{tag-name}";
         public static final String GET_RECENT_MEDIA_WITH_TAG = "tags/{tag-name}/media/recent";
         public static final String SEARCH_TAG = "tags/search";
+
+        public static final String GET_LOCATION_DETAILS = "locations/{location-id}";
+        public static final String GET_RECENT_MEDIA_WITH_LOCATION = "locations/{location-id}/media/recent";
+        public static final String SEARCH_LOCATION = "locations/search";
 
 
     }

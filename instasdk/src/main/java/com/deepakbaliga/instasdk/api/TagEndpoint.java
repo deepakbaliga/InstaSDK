@@ -37,7 +37,7 @@ public interface TagEndpoint {
      */
     @GET(InstaConstants.Endpoint.GET_RECENT_MEDIA_WITH_TAG)
     Call<FeedResponse> getRecentMediaWithTag(@Path(InstaConstants.TAG_NAME) String tagName,
-                                             @Path(InstaConstants.COUNT) int count,
+                                             @Query(InstaConstants.COUNT) int count,
                                              @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
