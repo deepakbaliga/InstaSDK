@@ -23,8 +23,8 @@ public interface UserEndpoint {
      * @return Information about the user
      */
     @GET(InstaConstants.Endpoint.GET_USER)
-    public Call<UserResponse> getUser(@Path(InstaConstants.USERID) String userID,
-                                      @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<UserResponse> getUser(@Path(InstaConstants.USERID) String userID,
+                               @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -34,7 +34,7 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_FEEDS)
-    public Call<FeedResponse> getFeeds(@Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getFeeds(@Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -45,8 +45,8 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_FEEDS)
-    public Call<FeedResponse> getFeeds(@Query(InstaConstants.COUNT) int count,
-                                       @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getFeeds(@Query(InstaConstants.COUNT) int count,
+                                @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
      * See the authenticated user's feed.
@@ -58,10 +58,10 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_FEEDS)
-    public Call<FeedResponse> getFeeds(@Query(InstaConstants.COUNT) int count,
-                                       @Query(InstaConstants.MIN_ID) String minID,
-                                       @Query(InstaConstants.MAX_ID) String maxID,
-                                       @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getFeeds(@Query(InstaConstants.COUNT) int count,
+                                @Query(InstaConstants.MIN_ID) String minID,
+                                @Query(InstaConstants.MAX_ID) String maxID,
+                                @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -73,8 +73,8 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_RECENT_MEDIA)
-    public Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
-                                             @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
+                                      @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -87,9 +87,9 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_RECENT_MEDIA)
-    public Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
-                                             @Query(InstaConstants.COUNT) int count,
-                                             @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
+                                      @Query(InstaConstants.COUNT) int count,
+                                      @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
      * Get the most recent media published by a user. To get the most recent media published by
@@ -103,11 +103,11 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_RECENT_MEDIA)
-    public Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
-                                             @Query(InstaConstants.COUNT) int count,
-                                             @Query(InstaConstants.MIN_ID) String minID,
-                                             @Query(InstaConstants.MAX_ID) String maxID,
-                                             @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
+                                      @Query(InstaConstants.COUNT) int count,
+                                      @Query(InstaConstants.MIN_ID) String minID,
+                                      @Query(InstaConstants.MAX_ID) String maxID,
+                                      @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -122,11 +122,11 @@ public interface UserEndpoint {
      * @return Feeds and pagination information
      */
     @GET(InstaConstants.Endpoint.GET_RECENT_MEDIA)
-    public Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
-                                             @Query(InstaConstants.COUNT) int count,
-                                             @Query(InstaConstants.MIN_TIMESTAMP) long minTimeStamp,
-                                             @Query(InstaConstants.MAX_TIMESTAMP) long maxTimeStamp,
-                                             @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getRecentMedia(@Query(InstaConstants.USERID) String userID,
+                                      @Query(InstaConstants.COUNT) int count,
+                                      @Query(InstaConstants.MIN_TIMESTAMP) long minTimeStamp,
+                                      @Query(InstaConstants.MAX_TIMESTAMP) long maxTimeStamp,
+                                      @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
     /**
@@ -140,9 +140,9 @@ public interface UserEndpoint {
      * @return
      */
     @GET(InstaConstants.Endpoint.GET_LIKED_MEDIA)
-    public Call<FeedResponse> getLikedMedia(@Query(InstaConstants.COUNT) int count,
-                                            @Query(InstaConstants.MAX_LIKE_ID) String maxLikeID,
-                                            @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<FeedResponse> getLikedMedia(@Query(InstaConstants.COUNT) int count,
+                                     @Query(InstaConstants.MAX_LIKE_ID) String maxLikeID,
+                                     @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
      * Search for a user by name.
@@ -152,8 +152,8 @@ public interface UserEndpoint {
      * @return List of users
      */
     @GET(InstaConstants.Endpoint.GET_LIKED_MEDIA)
-    public Call<UserList> searchUser(@Query(InstaConstants.QUERY) String query,
-                                     @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<UserList> searchUser(@Query(InstaConstants.QUERY) String query,
+                              @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
      * Search for a user by name.
@@ -164,9 +164,9 @@ public interface UserEndpoint {
      * @return List of users
      */
     @GET(InstaConstants.Endpoint.SEARCH_USER)
-    public Call<UserList> searchUser(@Query(InstaConstants.QUERY) String query,
-                                     @Query(InstaConstants.COUNT) int count,
-                                     @Query(InstaConstants.ACCESSTOKEN) String token);
+    Call<UserList> searchUser(@Query(InstaConstants.QUERY) String query,
+                              @Query(InstaConstants.COUNT) int count,
+                              @Query(InstaConstants.ACCESSTOKEN) String token);
 
 
 }
