@@ -27,6 +27,14 @@ public class InstaConstants {
         public static final String GET_LIKED_MEDIA = "users/self/media/liked";
         public static final String SEARCH_USER = "users/search";
 
+
+        public static final String GET_FOLLOWS = "users/{user-id}/follows";
+        public static final String GET_FOLLOWED_BY = "users/{user-id}/followed-by";
+        public static final String GET_REQUESTED_BY = "users/self/requested-by";
+        public static final String GET_RELATIONSHIP = "users/{user-id}/relationship";
+
+
+
     }
 
 }
