@@ -26,7 +26,6 @@ public class InstaConstants {
     public static final String DISTANCE = "distance";
 
 
-
     public static class Endpoint {
 
         public static final String GET_USER = "users/{user-id}";
@@ -41,6 +40,16 @@ public class InstaConstants {
         public static final String GET_REQUESTED_BY = "users/self/requested-by";
         public static final String GET_RELATIONSHIP = "users/{user-id}/relationship";
 
+
+        public static final String GET_MEDIA_DETAILS = "media/{media-id}";
+        public static final String SEARCH_BY_LOCATION = "media/search";
+        public static final String GET_POPULAR = "media/popular";
+
+
+        public static final String GET_COMMENTS = "media/{media-id}/comments";
+
+
+        public static final String GET_LIKES = "media/{media-id}/likes";
 
 
     }

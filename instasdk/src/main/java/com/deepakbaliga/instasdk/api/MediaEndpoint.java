@@ -26,7 +26,7 @@ public interface MediaEndpoint {
      * @param token   Access token of the authenticated user
      * @return Details of a feed
      */
-    @GET("media/{media-id}")
+    @GET(InstaConstants.Endpoint.GET_MEDIA_DETAILS)
     Call<MediaReponse> getMediaDetails(@Path(InstaConstants.MEDIA_ID) String mediaID,
                                        @Query(InstaConstants.ACCESSTOKEN) String token);
 
@@ -41,7 +41,7 @@ public interface MediaEndpoint {
      * @param token     Access token of the authenticated user
      * @return List of feeds and pagination
      */
-    @GET("media/search")
+    @GET(InstaConstants.Endpoint.SEARCH_BY_LOCATION)
     Call<FeedResponse> searchMediaByLocation(@Query(InstaConstants.LATITUDE) double latitude,
                                              @Query(InstaConstants.LONGITUDE) double longitude,
                                              @IntRange(from = 1, to = 5)
@@ -55,7 +55,7 @@ public interface MediaEndpoint {
      * @param token Access token of the authenticated user
      * @return list of feeds and pagination
      */
-    @GET("media/popular")
+    @GET(InstaConstants.Endpoint.GET_POPULAR)
     Call<FeedResponse> getPopular(@Query(InstaConstants.ACCESSTOKEN) String token);
 
 }
