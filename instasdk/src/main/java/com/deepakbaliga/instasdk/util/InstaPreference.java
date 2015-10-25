@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import java.util.Map;
-import java.util.Set;
-
 /**
  * Created by deezdroid on 24/10/15.
  * InstaPreference is a wrapper for Shared Preferences
