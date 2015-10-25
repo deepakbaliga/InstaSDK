@@ -19,6 +19,14 @@ public class InstaConstants {
     public static final String MAX_LIKE_ID = "max_like_id";
     public static final String QUERY = "q";
 
+    public static final String MEDIA_ID = "media-id";
+
+    public static final String LATITUDE = "lat";
+    public static final String LONGITUDE = "lng";
+    public static final String DISTANCE = "distance";
+
+
+
     public static class Endpoint {
 
         public static final String GET_USER = "users/{user-id}";
