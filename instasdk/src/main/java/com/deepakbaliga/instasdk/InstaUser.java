@@ -85,7 +85,8 @@ public class InstaUser {
                 public void onResponse(Response<UserResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getUser());
-
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -118,6 +119,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -151,6 +154,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -186,6 +191,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -222,6 +229,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -257,6 +266,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -293,6 +304,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -329,6 +342,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -362,6 +377,8 @@ public class InstaUser {
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -393,6 +410,8 @@ public class InstaUser {
                 public void onResponse(Response<UserList> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getUsers());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
@@ -424,6 +443,8 @@ public class InstaUser {
                 public void onResponse(Response<UserList> response, Retrofit retrofit) {
                     if (response.isSuccess())
                         callback.onSuccess(response.body().getUsers());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
                 }
 
                 @Override
