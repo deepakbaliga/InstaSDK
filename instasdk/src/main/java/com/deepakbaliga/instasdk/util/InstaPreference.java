@@ -48,6 +48,10 @@ public class InstaPreference {
         editor.putString(key, value).apply();
     }
 
+    public String get(String key, String defValue) {
+        return preferences.getString(key, defValue);
+    }
+
 
     public void clear(String key) {
         editor.remove(key).apply();

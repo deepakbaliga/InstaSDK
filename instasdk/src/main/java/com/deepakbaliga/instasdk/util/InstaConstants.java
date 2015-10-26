@@ -10,6 +10,7 @@ public class InstaConstants {
 
 
     public static final String ACCESSTOKEN = "access_token";
+    public static final String ACCESS_TOKEN_MESSAGE = "Access Token is not set. Please Authenticate";
     public static final String USERID = "user-id";
     public static final String COUNT = "count";
     public static final String MIN_ID = "min_id";
