@@ -135,6 +135,19 @@ public interface UserEndpoint {
      * for the currently authenticated user.
      *
      * @param count     Count of media to return.
+     * @param token     access token of authenticated user
+     * @return
+     */
+    @GET(InstaConstants.Endpoint.GET_LIKED_MEDIA)
+    Call<FeedResponse> getLikedMedia(@Query(InstaConstants.COUNT) int count,
+                                     @Query(InstaConstants.ACCESSTOKEN) String token);
+
+    /**
+     * Get the list of media liked by the authenticated user. Private media is returned as long as
+     * the authenticated user has permission to view that media. Liked media lists are only available
+     * for the currently authenticated user.
+     *
+     * @param count     Count of media to return.
      * @param maxLikeID Return media liked before this id.
      * @param token     access token of authenticated user
      * @return
