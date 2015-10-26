@@ -83,8 +83,9 @@ public class InstaUser {
             call.enqueue(new Callback<UserResponse>() {
                 @Override
                 public void onResponse(Response<UserResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getUser());
+
                 }
 
                 @Override
@@ -115,7 +116,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -148,7 +149,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -183,7 +184,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -219,7 +220,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -254,7 +255,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -290,7 +291,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -326,7 +327,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -359,7 +360,7 @@ public class InstaUser {
             call.enqueue(new Callback<FeedResponse>() {
                 @Override
                 public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getFeeds());
                 }
 
@@ -390,7 +391,7 @@ public class InstaUser {
             call.enqueue(new Callback<UserList>() {
                 @Override
                 public void onResponse(Response<UserList> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getUsers());
                 }
 
@@ -421,7 +422,7 @@ public class InstaUser {
             call.enqueue(new Callback<UserList>() {
                 @Override
                 public void onResponse(Response<UserList> response, Retrofit retrofit) {
-                    if (response.code() == InstaConstants.OK)
+                    if (response.isSuccess())
                         callback.onSuccess(response.body().getUsers());
                 }
 
