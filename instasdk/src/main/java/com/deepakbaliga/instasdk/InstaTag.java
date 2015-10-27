@@ -4,11 +4,14 @@ import android.content.Context;
 
 import com.deepakbaliga.instasdk.api.LikeEndpoint;
 import com.deepakbaliga.instasdk.api.TagEndpoint;
+import com.deepakbaliga.instasdk.callback.FeedsCallback;
 import com.deepakbaliga.instasdk.callback.LikesCallback;
 import com.deepakbaliga.instasdk.callback.TagCallback;
+import com.deepakbaliga.instasdk.callback.TagsCallback;
 import com.deepakbaliga.instasdk.entity.model.InstaError;
 import com.deepakbaliga.instasdk.entity.model.LikesEntity;
 import com.deepakbaliga.instasdk.entity.reponse.FeedResponse;
+import com.deepakbaliga.instasdk.entity.reponse.TagList;
 import com.deepakbaliga.instasdk.entity.reponse.TagResponse;
 import com.deepakbaliga.instasdk.util.InstaConstants;
 import com.deepakbaliga.instasdk.util.InstaPreference;
@@ -84,7 +87,74 @@ public class InstaTag {
 
                 @Override
                 public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
+                }
+            });
+    }
 
+    /**
+     * Get a list of recently tagged media.
+     *
+     * @param tagName  name of the tag
+     * @param count
+     * @param callback
+     */
+    public void getRecentMediaWithTag(String tagName, int count, final FeedsCallback callback) {
+
+        final Call<FeedResponse> call = endpoint.getRecentMediaWithTag(tagName, count, accessToken);
+
+        if (!NetworkUtility.isNetworkConnected(context))
+            callback.onFailure(noInternet());
+
+        else if (accessToken == null)
+            callback.onFailure(noAccessToken());
+
+        else
+            call.enqueue(new Callback<FeedResponse>() {
+                @Override
+                public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
+                    if (response.isSuccess())
+                        callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
+                }
+            });
+    }
+
+    /**
+     * Search for tags by name.
+     *
+     * @param query    A valid tag name without a leading #. (eg. snowy, nofilter)
+     * @param callback
+     */
+    public void searchTags(String query, final TagsCallback callback) {
+
+        Call<TagList> call = endpoint.searchTags(query, accessToken);
+
+        if (!NetworkUtility.isNetworkConnected(context))
+            callback.onFailure(noInternet());
+
+        else if (accessToken == null)
+            callback.onFailure(noAccessToken());
+
+        else
+            call.enqueue(new Callback<TagList>() {
+                @Override
+                public void onResponse(Response<TagList> response, Retrofit retrofit) {
+                    if (response.isSuccess())
+                        callback.onSuccess(response.body().getTags());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
                 }
             });
     }
