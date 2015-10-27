@@ -20,7 +20,7 @@ public interface LocationEndpoint {
     /**
      * Get information about a location.
      *
-     * @param locationID Id of the location
+     * @param locationID ID of the location
      * @param token      Access token of authenticated user
      * @return Details about a location
      */
