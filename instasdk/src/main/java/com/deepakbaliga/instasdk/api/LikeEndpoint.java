@@ -1,5 +1,6 @@
 package com.deepakbaliga.instasdk.api;
 
+import com.deepakbaliga.instasdk.entity.model.LikesEntity;
 import com.deepakbaliga.instasdk.entity.reponse.CommentsList;
 import com.deepakbaliga.instasdk.util.InstaConstants;
 
@@ -21,6 +22,6 @@ public interface LikeEndpoint {
      * @return Returns list of users
      */
     @GET(InstaConstants.Endpoint.GET_LIKES)
-    Call<CommentsList> getLikes(@Path(InstaConstants.MEDIA_ID) String mediaID,
+    Call<LikesEntity> getLikes(@Path(InstaConstants.MEDIA_ID) String mediaID,
                                 @Query(InstaConstants.ACCESSTOKEN) String token);
 }
