@@ -3,8 +3,10 @@ package com.deepakbaliga.instasdk;
 import android.content.Context;
 
 import com.deepakbaliga.instasdk.api.RelationshipEndpoint;
+import com.deepakbaliga.instasdk.callback.RelationCallback;
 import com.deepakbaliga.instasdk.callback.UsersCallback;
 import com.deepakbaliga.instasdk.entity.model.InstaError;
+import com.deepakbaliga.instasdk.entity.reponse.RelationshipEntity;
 import com.deepakbaliga.instasdk.entity.reponse.UserList;
 import com.deepakbaliga.instasdk.util.InstaConstants;
 import com.deepakbaliga.instasdk.util.InstaPreference;
@@ -155,5 +157,42 @@ public class InstaRelationship {
 
     }
 
+
+    /**
+     * Get information about a relationship to another user.
+     *
+     * @param userID   ID of the user whos relationship status with the authenticated user has to be
+     *                 retrieved.
+     * @param callback
+     */
+    public void getRelationship(String userID, final RelationCallback callback) {
+
+        Call<RelationshipEntity> call = endpoint.getRelationship(userID, accessToken);
+
+        if (!NetworkUtility.isNetworkConnected(context))
+            callback.onFailure(noInternet());
+
+        else if (accessToken == null)
+            callback.onFailure(noAccessToken());
+
+        else
+            call.enqueue(new Callback<RelationshipEntity>() {
+                @Override
+                public void onResponse(Response<RelationshipEntity> response, Retrofit retrofit) {
+
+                    if (response.isSuccess())
+                        callback.onSuccess(response.body().getRelationship());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
+
+                }
+            });
+
+    }
 
 }
