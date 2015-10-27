@@ -130,7 +130,40 @@ public class InstaMedia {
 
                 @Override
                 public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
+                }
+            });
 
+    }
+
+    /**
+     * Get a list of what media is most popular at the moment. Can return mix of image and video types.
+     *
+     * @param callback
+     */
+    public void getPopularMedia(final FeedsCallback callback) {
+
+        final Call<FeedResponse> call = endpoint.getPopular(accessToken);
+
+        if (!NetworkUtility.isNetworkConnected(context))
+            callback.onFailure(noInternet());
+
+        else if (accessToken == null)
+            callback.onFailure(noAccessToken());
+
+        else
+            call.enqueue(new Callback<FeedResponse>() {
+                @Override
+                public void onResponse(Response<FeedResponse> response, Retrofit retrofit) {
+                    if (response.isSuccess())
+                        callback.onSuccess(response.body().getFeeds());
+                    else
+                        callback.onFailure(new InstaError(response.code(), response.raw().message()));
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    callback.onFailure(error(t));
                 }
             });
 
