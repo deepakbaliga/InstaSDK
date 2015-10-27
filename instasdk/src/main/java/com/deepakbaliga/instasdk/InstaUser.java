@@ -30,8 +30,6 @@ public class InstaUser {
     private Retrofit retrofit;
 
 
-    private static final String SELF = "self";
-
     //API
     private UserEndpoint endpoint;
 
