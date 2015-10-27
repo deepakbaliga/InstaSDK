@@ -83,7 +83,7 @@ public class InstaLike {
 
                 @Override
                 public void onFailure(Throwable t) {
-
+                    callback.onFailure(error(t));
                 }
             });
     }

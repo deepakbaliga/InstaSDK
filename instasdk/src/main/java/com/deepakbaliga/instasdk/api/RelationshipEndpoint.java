@@ -26,7 +26,7 @@ public interface RelationshipEndpoint {
                               @Query(InstaConstants.ACCESSTOKEN) String token);
 
     /**
-     * Get the list of users this user follows.
+     * Get the list of users who follow this user
      *
      * @param userID ID of the user whos follow list has to be retrieved. Can be self.
      * @param token  Access token of authenticated user
