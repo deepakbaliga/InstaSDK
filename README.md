@@ -78,10 +78,8 @@ All methods are asynchronously. So no AsyncTask blah blah blah..
 * ````getMediaDetails(String mediaID, MediaDetailsCallback callback)````
     Get information about a media object. The returned 'type' key will     allow you to differentiate between image and video media.
     
-* ````searchMediaByLocation(double latitude, double longitude,
-                                       int distance, final FeedsCallback callback````
-
-Search for media in a given area. The default time span is set to 5 days. Can return mix of image and video types.  Latitude of the center search coordinate. If used, longitude is required. Longitude of the center search coordinate. If used, latitude is required. Default is 1km , max distance is 5km.
+* ````searchMediaByLocation(double latitude, double longitude, int distance, final FeedsCallback callback)````
+    Search for media in a given area. The default time span is set to 5 days. Can return mix of image and video types.           Latitude of the center search coordinate. If used, longitude is required. Longitude of the center search coordinate. If      used, latitude is required. Default is 1km , max distance is 5km.
 
 ##### InstaRelationship
 ##### InstaComment
