@@ -66,6 +66,9 @@ All methods are asynchronously. So no AsyncTask blah blah blah..
 * ````getRecentMedia(String userID, FeedsCallback callback)````
     Get the most recent media published by a user. To get the most recent media published by
     the owner of the access token, you may use ````InstaConstants.SELF```` instead of the userID.
+    
+* ````getLikedMedia(int count, final FeedsCallback callback)````
+    Get the list of media liked by the authenticated user. Private media     is returned as long as the authenticated user has permission to view     that media.  ````InstaConstants.SELF```` instead of the userID.
 
 ##### InstaMedia
 ##### InstaRelationship
