@@ -14,6 +14,8 @@ compile 'com.deepakbaliga....'
 
 Permissions
 -----
+Add the following permissions to your Android manifest file.
+
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -26,11 +28,13 @@ Authentication
 
 Instagram API uses the OAuth2 protocol for authentication, which is handled by the InstaSDK.
 
-### Obtaining an access token
+### Obtaining Developer Keys
 
 You will need to register in the instagram [developer site](https://instagram.com/developer/register/) and obtain app's Client ID, and Redirect URI in order to authenticate and use the operations in this library.
 
 ### Authenticating a user
+
+
 
 
 
