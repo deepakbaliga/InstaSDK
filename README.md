@@ -52,13 +52,18 @@ Authentication is as simple as
       }
     });
 ````
-##### API Methods
+API Methods
+-----
  Once user authentication is successful the library takes care of access token and you just need to call the required methods.
  
- ####### InstaUser
-    <ul>
-    <li>getUser</li>
-    </ul>
+##### InstaUser
+##### InstaMedia
+##### InstaRelationship
+##### InstaComment
+##### InstaLike
+##### InstaLocation
+##### InstaTag
+    
  
  
 
