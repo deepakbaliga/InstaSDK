@@ -57,8 +57,9 @@ API Methods
 All methods are asynchronously. So no AsyncTask blah blah blah.. 
  
 ##### InstaUser
-* ````getUser(String userID, UserCallback callback); ````
+* ````getUser(String userID, UserCallback callback) ````
     Get basic information about a user or authenticated user. To get information about the authenticated user pass               ````InstaConstants.SELF```` instead of userID.
+
 *getFeeds(FeedsCallback callback)
 
 ##### InstaMedia
