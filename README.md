@@ -31,7 +31,7 @@ Instagram API uses the OAuth2 protocol for authentication, which is handled by t
 
 ##### Obtaining Developer Keys
 
-You will need to register in the instagram [developer site](https://instagram.com/developer/register/) and obtain a Client ID, and Redirect URI for your client in order to authenticate and use the different operations in this library.
+You will need to register in the instagram <a href="https://instagram.com/developer/register/" target="_blank">developer site</a> and obtain a Client ID, and Redirect URI for your client in order to authenticate and use the different operations in this library.
 
 ##### Authenticating a user
 
