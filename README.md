@@ -1,11 +1,12 @@
 # _InstaSDK STILL UNDER DEVELOPMENT_ 
 
-_Description: An Instagram SDK for android_
+An Instagram SDK for android that helps developers intergrate Instagram Authentication 
+and use Instagram APIs asynchronously.
 
-## Project Setup
+Download
+--------
 
-_How do I, as a developer, start working on the project?_ 
-
-1. _ONE_
-2. _TWO_
+Grab via Gradle:
+```groovy
+compile 'com.deepakbaliga....'
 
