@@ -35,6 +35,8 @@ You will need to register in the instagram <a href="https://instagram.com/develo
 
 ##### Authenticating a user
 
+Authentication is as simple as 
+
 ````
     InstaAuthentication authentication = new InstaAuthentication(this);
     
@@ -50,6 +52,11 @@ You will need to register in the instagram <a href="https://instagram.com/develo
       }
     });
 ````
+##### API Methods
+ Once user authentication is successful the library takes care of access token and you just need to call the required methods.
+ 
+ 
+
 
 
 
