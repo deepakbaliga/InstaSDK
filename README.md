@@ -1,5 +1,5 @@
 # InstaSDK 
-###STILL UNDER DEVELOPMENT_
+### Under Development
 
 An Instagram SDK for android that helps developers intergrate Instagram Authentication 
 and use Instagram APIs asynchronously. InstaSDK for android uses the public Instagram API and is not affiliated with either Instagram, Inc. or Facebook, Inc.
