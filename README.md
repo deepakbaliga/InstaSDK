@@ -60,7 +60,12 @@ All methods are asynchronously. So no AsyncTask blah blah blah..
 * ````getUser(String userID, UserCallback callback) ````
     Get basic information about a user or authenticated user. To get information about the authenticated user pass               ````InstaConstants.SELF```` instead of userID.
 
-*getFeeds(FeedsCallback callback)
+* ````getFeeds(FeedsCallback callback)````
+    Retrieve the authenticated user's feed. 
+
+* ````getRecentMedia(String userID, FeedsCallback callback)````
+    Get the most recent media published by a user. To get the most recent media published by
+    the owner of the access token, you may use ````InstaConstants.SELF```` instead of the user-id.
 
 ##### InstaMedia
 ##### InstaRelationship
