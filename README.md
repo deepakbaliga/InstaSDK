@@ -57,7 +57,8 @@ API Methods
 All methods are asynchronously. So no AsyncTask blah blah blah.. 
  
 ##### InstaUser
-* getUser(String userID, UserCallback callback);
+* getUser(String userID, UserCallback callback); 
+
 ##### InstaMedia
 ##### InstaRelationship
 ##### InstaComment
