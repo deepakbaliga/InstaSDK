@@ -5,13 +5,7 @@ An Instagram SDK for android that helps developers intergrate Instagram Authenti
 and use Instagram APIs asynchronously. InstaSDK for android uses the public Instagram API and is not affiliated with either Instagram, Inc. or Facebook, Inc.
 
 
-Download
---------
 
-Grab via Gradle:
-```groovy
-compile 'com.deepakbaliga....'
-```
 
 Permissions
 -----
@@ -83,11 +77,10 @@ All methods are asynchronously. So no AsyncTask blah blah blah..
 
 ##### InstaRelationship
 ##### InstaComment
-##### InstaLike
-##### InstaLocation
-##### InstaTag
+## InstaLike
+###### InstaLocation
+###### InstaTag
     
- 
  
 
 
